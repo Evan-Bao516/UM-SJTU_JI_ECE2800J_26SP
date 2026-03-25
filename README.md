@@ -1,5 +1,5 @@
 # UM-SJTU_JI_ECE2800J_26SP
-Lecture slides, homework and projects of ECE2800J (26SP).
+Lecture slides, homework and projects of UM-SJTU JI (now called GC) ECE2800J (26SP).
 
 All codes have been tested by JOJ3, which is a really strict ~~and annoying~~ online judge system.
 
