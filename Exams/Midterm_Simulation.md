@@ -259,6 +259,7 @@ bool is_product_tree(tree_t tree);
 
 Notes: You are allowed to write helper functions. If they are needed, please also write the implementations of these helper functions, including **specification comments**. For simplicity, you can omit the specification comments for the function `is_product_tree`. Your solution must be **recursive**. You may not use loops, global / static variables, and goto-s. You may use branches.
 
+```c++
 bool is_product_tree(tree_t tree) {
     if (tree_isEmpty(tree)) {
         return true;
@@ -274,6 +275,7 @@ bool is_product_tree(tree_t tree) {
     bool current_matches = (tree_elt(tree) == tree_elt(left) * tree_elt(right));
     return current_matches && is_product_tree(left) && is_product_tree(right);
 }
+```
 __
 
 
@@ -312,6 +314,7 @@ __
 
 If any of the above errors happens, the main function issues a corresponding error message and returns. Please feel free to decide the error message. If none of the above errors happens, you can assume that the inputs are valid. Then the main function calls the function print_split to print all the vectors.
 
+```c++
 int main(int argc, char* argv[]) {
     if (argc < 4) {
         std::cout << "Missing arguments." << std::endl;
@@ -335,6 +338,7 @@ int main(int argc, char* argv[]) {
     print_split(n, b, s);
     return 0;
 }
+```
 __
 
 
@@ -382,6 +386,7 @@ Note that if there is no such a vector, your program prints nothing. Recall that
 - It is an empty list, or
 - It is an integer followed by a well-formed list.
 
+```c++
 // REQUIRES: n >= 0, b >= 0, prefix is a well-formed list
 // EFFECTS: Prints all valid vectors of length n, where each entry is in [0, b]
 //          and the sum of all new entries is s. Each printed vector is 
@@ -408,4 +413,5 @@ void print_split(int n, int b, int s) {
     list_t empty_list = list_make();
     print_split_helper(n, b, s, empty_list);
 }
+```
 __
